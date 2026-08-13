@@ -1,0 +1,17 @@
+site_name: WgpArch Fenriz Config
+site_url: https://wgparch.github.io/fenriz/
+theme:
+  name: material
+  palette:
+    primary: blue grey
+    accent: cyan
+  features:
+    - navigation.tabs
+    - navigation.expand
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Keybinds: keybinds.md
+  - Waybar & Scripts: waybar.md
+  - Look & Feel: theming.md
+  - Gallery: gallery.md

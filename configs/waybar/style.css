@@ -1,0 +1,275 @@
+/* Darkbeauty Theme */
+
+* {
+    font-family: 'Z003', 'Font Awesome 6 Free', 'Font Awesome 6 Brands';
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    text-shadow: none;
+}
+
+#waybar {
+    background-color: #000000;
+    font-size: 14px;
+    font-weight: 700;
+    color: #f0d2c0;
+}
+
+/* --- GLOBAL PILL STYLING --- */
+#custom-launcher,
+#clock,
+#custom-weather,
+#custom-switch,
+#wlr-workspaces,
+#wlr-taskbar,
+#custom-player,
+#memory,
+#cpu,
+#temperature,
+#battery,
+#disk,
+#custom-notification,
+#pulseaudio,
+#custom-power {
+    background-color: #000000;
+    border: 1px solid #2244dd;
+    border-radius: 15px;
+    margin: 0 4px;
+    padding: 2px 12px;
+    color: #f0d2c0;
+}
+
+/* --- NATIVE FERINZ-WAYBAR WORKSPACES --- */
+#wlr-workspaces {
+    background-color: #000000;
+    border: 1px solid #2244dd;
+    border-radius: 15px;
+    margin: 0 8px;
+    padding: 2px 10px;
+}
+
+#wlr-workspaces button {
+    color: #9b7f70;
+    font-size: 14px;
+    padding: 0 8px;
+    margin: 0 2px;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+#wlr-workspaces button.occupied {
+    color: #f0d2c0;
+}
+
+#wlr-workspaces button.active {
+    color: #ffffff;
+    background-color: #2244dd;
+    font-weight: 700;
+}
+
+#wlr-workspaces button:hover {
+    background-color: #0a1440;
+    color: #ffffff;
+}
+
+/* --- NATIVE FERINZ-WAYBAR WINDOW TITLE --- */
+#window {
+    background-color: #000000;
+    border: 1px solid #2244dd;
+    border-radius: 15px;
+    margin: 0 4px;
+    padding: 2px 12px;
+    color: #f0d2c0;
+    font-weight: 700;
+}
+
+#window.empty {
+    color: #9b7f70;
+}
+
+/* --- SPECIFIC MODULE TWEAKS --- */
+#custom-launcher {
+    font-size: 16px;
+    padding: 2px 14px;
+    margin-left: 8px;
+}
+
+#custom-launcher:hover {
+    background-color: #0a1440;
+    border-color: #2244dd;
+}
+
+#clock {
+    padding: 2px 16px;
+}
+
+#custom-switch {
+    transition: all 0.3s ease;
+}
+
+#custom-switch:hover {
+    background-color: #0a1440;
+    border-color: #2244dd;
+}
+
+#custom-player {
+    padding: 2px 14px;
+}
+
+#custom-player.paused {
+    color: #9b7f70;
+}
+
+#memory, #cpu, #temperature {
+    padding: 2px 10px;
+    margin: 0 3px;
+}
+
+#disk {
+    padding: 2px 10px;
+    margin: 0 3px;
+}
+
+#disk.warning {
+    color: #ffd700;
+    border-color: #ffd700;
+}
+
+#disk.critical {
+    background-color: #000000;
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+}
+
+#cpu.critical, #memory.critical, #temperature.critical {
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+}
+
+#cpu.warning, #memory.warning, #temperature.warning {
+    color: #ffd700;
+    border-color: #ffd700;
+}
+
+#battery.charging {
+    color: #88ff88;
+}
+
+#battery.warning {
+    color: #ffaa88;
+}
+
+#battery.critical {
+    background-color: #000000;
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+}
+
+#pulseaudio {
+    padding: 2px 12px;
+}
+
+#pulseaudio.muted {
+    color: #9b7f70;
+}
+
+#custom-notification {
+    padding: 2px 12px;
+}
+
+#custom-power {
+    font-size: 16px;
+    padding: 2px 14px;
+    margin-right: 8px;
+}
+
+#custom-power:hover {
+    background-color: #403030;
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+}
+
+/* --- TOOLTIPS & MENUS --- */
+tooltip {
+    background-color: #000000;
+    border: 1px solid #2244dd;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+tooltip label {
+    color: #f0d2c0;
+    font-family: "Z003", "Font Awesome 6 Free", "Font Awesome 6 Brands";
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0;
+}
+
+menu {
+    border-radius: 10px;
+    font-weight: 700;
+    color: #f0d2c0;
+    background-color: #000000;
+    border: 1px solid #2244dd;
+}
+
+menu > *:hover {
+    border-radius: 10px;
+    background-color: #0a1440;
+}
+
+/* ==========================================
+   Taskbar Styling
+   ========================================== */
+#taskbar {
+    background-color: #000000;
+    margin: 0 4px;
+    padding: 2px 12px;
+}
+
+#taskbar button {
+    background-color: transparent;
+    color: #f0d2c0;
+    border: none;
+    border-radius: 0;
+    padding: 0 6px;
+    margin: 0 2px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+#taskbar button:hover {
+    color: #ffffff;
+}
+
+#taskbar button.active {
+    color: #ffffff;
+    background-color: #2244dd;
+    border-radius: 10px;
+}
+
+
+/* ext-workspace pills */
+#workspaces button {
+    padding: 0px 9px;
+    margin: 2px 1px;
+    border-radius: 10px;
+    border: 1px solid #2244dd;
+    background-color: transparent;
+    color: #f0d2c0;
+}
+#workspaces button.active {
+    background-color: #2244dd;
+    color: #ffffff;
+}
+#workspaces button.occupied {
+    border-color: #f0d2c0;
+}
+#workspaces button:hover {
+    background-color: #2244dd;
+    color: #ffffff;
+}

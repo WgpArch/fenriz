@@ -1,0 +1,85 @@
+/* Darkbeauty Theme for Rofi */
+
+* {
+    background: rgba ( 0, 0, 0, 85% );
+    background-color: transparent;
+    foreground: rgba ( 240, 210, 192, 100% );
+    bordercolor: rgba ( 34, 68, 221, 100% );
+
+    selected-normal-background: rgba ( 34, 68, 221, 100% );
+    selected-normal-foreground: rgba ( 255, 255, 255, 100% );
+
+    normal-background: rgba ( 0, 0, 0, 0% );
+    normal-foreground: @foreground;
+
+    urgent-foreground: rgba ( 255, 107, 107, 100% );
+    active-foreground: rgba ( 255, 215, 0, 100% );
+
+    separatorcolor: @bordercolor;
+}
+
+window {
+    width: 650px;
+    background-color: transparent;
+    background-image: url("/home/wgparch/Pictures/ALNW/Darkbeauty-resized.jpg");
+    border: 1px;
+    border-color: @bordercolor;
+    border-radius: 15px;
+    padding: 15px;
+    spacing: 10px;
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    children: [ prompt, entry ];
+    spacing: 10px;
+    padding: 5px;
+    border: 0px 0px 1px;
+    border-color: @separatorcolor;
+}
+
+prompt {
+    text-color: @foreground;
+    font: "Z003 16 bold";
+}
+
+entry {
+    text-color: @foreground;
+    font: "Z003 14";
+}
+
+listview {
+    lines: 12;
+    spacing: 5px;
+    padding: 5px;
+    scrollbar: false;
+}
+
+element {
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+    font: "Z003 14";
+}
+
+element-icon {
+    size: 24px;
+    margin: 0px 10px 0px 0px;
+}
+
+element.normal.normal {
+    background-color: @normal-background;
+    text-color: @normal-foreground;
+}
+
+element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color: @selected-normal-foreground;
+    border: 1px;
+    border-color: @bordercolor;
+    font: "Z003 14 bold";
+}

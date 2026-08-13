@@ -1,0 +1,168 @@
+
+
+{
+   "layer": "top",
+   "position": "top",
+   "height": 34,
+   "margin": "0 0 0 0",
+   "width": 1350,
+   "modules-left": ["custom/launcher", "tray", "ext/workspaces"],
+   "modules-center": ["clock", "custom/weather"],
+   "modules-right": ["custom/player", "memory", "cpu", "temperature", "battery", "custom/notification", "pulseaudio", "disk", "custom/power"],
+
+    "ext/workspaces": {
+        "format": "{name}",
+        "on-click": "activate",
+        "sort-by-id": true,
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+
+    "custom/launcher": {
+        "format": " ",
+        "on-click": "rofi -show drun -theme ~/.config/fenriz/rofi/fenriz.rasi",
+        "tooltip": true,
+        "tooltip-format": "btw 😎"
+    },
+
+    "custom/weather": {
+        "format": "{}",
+        "tooltip": true,
+        "interval": 300,
+        "exec": "~/.config/waybar/scripts/weather.py",
+        "return-type": "json"
+  },
+
+    "clock": {
+        "interval": 1,
+        "tooltip-format": "<big>{:%b %d}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%b %d %H:%M:%S %p}",
+        "format-alt": "{:%Y-%m-%d}",
+        "calendar": {
+        "mode": "month",
+        "mode-mon-col": 3,
+        "week-pos": "right",
+        "on-scroll": 1,
+        "format": {
+        "months":     "<span><b>{}</b></span>",
+        "days":       "<span><b>{}</b></span>",
+        "weeks":      "<span><b>W{}</b></span>",
+        "weekdays":   "<span><b>{}</b></span>",
+        "today":      "<span><b><u>{}</u></b></span>"
+        }
+    },
+        "actions":  {
+        "on-click-right": "mode",
+        "on-scroll-up": "tz_up",
+        "on-scroll-down": "tz_down",
+        "on-scroll-up": "shift_up",
+        "on-scroll-down": "shift_down"
+        }
+    },
+
+    "temperature": {
+        "tooltip": true,
+        "thermal-zone": 2,
+        "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+        "critical-threshold": 80,
+        "format-critical": " {temperatureC}°C",
+        "format": " {temperatureC}°C",
+        "on-click": "lxterminal -e bash -c 'sensors; exec bash'"
+   },
+
+    "cpu": {
+        "format": "  {}%",
+        "return-type": "json",
+        "interval": 5,
+        "on-click": "$LXTERMINAL -e btop"
+    },
+
+    "memory": {
+        "format": "  {}%",
+        "return-type": "json",
+        "interval": 5
+    },
+
+    "disk": {
+        "format": " 󰋊 {percentage_used}%",
+        "tooltip": true,
+        "tooltip-format": "{used} | {total}",
+        "interval": 5
+    },
+
+    "battery": {
+        "states": {
+        "good": 95,
+        "warning": 30,
+        "critical": 20
+        },
+        "on-click-middle": "xfce-terminal acpi -i",
+        "format": "{icon}  {capacity}%",
+        "format-full": "{icon}  {capacity}%",
+        "format-charging": "  {capacity}%",
+        "format-plugged": "  {capacity}%",
+        "format-alt": "{time}  {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+    "custom/notification": {
+        "tooltip": false,
+        "format": "{icon} ",
+        "format-icons": {
+        "notification": "<span foreground='red'><sup><small></small></sup></span>",
+        "none": "",
+        "dnd-notification": "<span foreground='red'><sup><small></small></sup></span>",
+        "dnd-none": "",
+        "inhibited-notification": "<span foreground='red'><sup><small></small></sup></span>",
+        "inhibited-none": "",
+        "dnd-inhibited-notification": "<span foreground='red'><sup><small></small></sup></span>",
+        "dnd-inhibited-none": ""
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+   },
+
+   "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "{icon} {volume}%  {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+   },
+
+   "custom/player": {
+       "format": "🎵 {}",
+       "exec": "~/.config/waybar/scripts/player.sh",
+       "interval": 5,
+       "max-length": 50,
+       "tooltip": true,
+       "return-type": "text"
+    },
+
+   "custom/power": {
+        "tooltip": true,
+        "on-click": "~/.config/fenriz/rofi/powermenu.sh",
+        "on-click-right": "killall rofi",
+        "format": "⏻ "
+    }
+}
+
+  
