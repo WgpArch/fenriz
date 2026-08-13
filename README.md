@@ -23,10 +23,18 @@ For full installation instructions, keybinds, waybar configuration, and theming 
 
 ## 📸 Screenshots
 
-[Screenshot 1](docs/screenshots/shot-143500.png)
-[Screenshot 2](docs/screenshots/shot-143512.png)
-[Screenshot 3](docs/screenshots/shot-143519.png)
-[Screenshot 4](docs/screenshots/shot-143528.png)
-[Screenshot 5](docs/screenshots/shot-143535.png)
-[Screenshot 6](docs/screenshots/shot-143548.png)
-[Screenshot 7](docs/screenshots/shot-143615.png)
+Full gallery: **[wgparch.github.io/fenriz/gallery](https://wgparch.github.io/fenriz/gallery/)**
+
+![Desktop 1](docs/screenshots/shot-143500.png)
+
+![Desktop 2](docs/screenshots/shot-143512.png)
+
+![Desktop 3](docs/screenshots/shot-143519.png)
+
+![Desktop 4](docs/screenshots/shot-143528.png)
+
+![Desktop 5](docs/screenshots/shot-143535.png)
+
+![Desktop 6](docs/screenshots/shot-143548.png)
+
+![Desktop 7](docs/screenshots/shot-143615.png)
